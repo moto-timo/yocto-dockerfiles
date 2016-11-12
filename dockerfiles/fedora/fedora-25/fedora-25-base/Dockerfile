@@ -14,21 +14,15 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-# once Fedora-25 is no longer Alpha
+# once Fedora-25 is no longer Beta
 #FROM fedora:25
 FROM scratch
 
-# download from http://koji.fedoraproject.org/koji/tasks?start=0&state=closed&view=tree&method=image&order=-id
-# state=closed means successful build
-# you want Fedora-Docker-Base-{release}-{date}.n.0.x86_64.tar.xz
-# or download from
-# https://getfedora.org/en/cloud/prerelease/docker.html
-# e.g.
-# https://download.fedoraproject.org/pub/fedora/linux/releases/test/25_Alpha/Docker/x86_64/images/Fedora-Docker-Base-25_Alpha-2.x86_64.tar.xz
+# download https://download.fedoraproject.org/pub/fedora/linux/releases/test/25_Beta/Docker/x86_64/images/Fedora-Docker-Base-25_Beta-1.1.x86_64.tar.xz  
 # extract that
-# mv layer.tar fedora-{release}-{date}.tar
-# xz --best fedora-{release}-{date}.tar
-ADD fedora-25-alpha-2_20160824.tar.xz /
+# mv layer.tar fedora-{release}-{version}.tar
+# xz --best fedora-{release}-{version}.tar
+ADD fedora-25-beta-1.1.tar.xz /
 # ^^ becomes the equivalent of fedora base image as if
 # FROM fedora:{release}
 
