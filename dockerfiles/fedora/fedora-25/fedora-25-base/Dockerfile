@@ -22,7 +22,7 @@ FROM scratch
 # extract that
 # mv layer.tar fedora-{release}-{version}.tar
 # xz --best fedora-{release}-{version}.tar
-ADD fedora-25-beta-1.1.tar.xz /
+ADD fedora-base-25-beta-1.1.tar.xz /
 # ^^ becomes the equivalent of fedora base image as if
 # FROM fedora:{release}
 
