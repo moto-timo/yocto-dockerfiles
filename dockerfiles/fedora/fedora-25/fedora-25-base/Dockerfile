@@ -20,9 +20,9 @@ FROM scratch
 
 # download https://download.fedoraproject.org/pub/fedora/linux/releases/test/25_Beta/Docker/x86_64/images/Fedora-Docker-Base-25_Beta-1.1.x86_64.tar.xz  
 # extract that
-# mv layer.tar fedora-{release}-{version}.tar
-# xz --best fedora-{release}-{version}.tar
-ADD fedora-base-25-beta-1.1.tar.xz /
+# mv layer.tar fedora-docker-base-{release}-{version}.tar
+# xz --best fedora-docker-base-{release}-{version}.tar
+ADD fedora-docker-base-25-beta-1.1.tar.xz /
 # ^^ becomes the equivalent of fedora base image as if
 # FROM fedora:{release}
 
