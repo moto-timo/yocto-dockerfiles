@@ -23,6 +23,7 @@ FROM scratch
 # mv layer.tar fedora-docker-base-{release}-{version}.tar
 # xz --best fedora-docker-base-{release}-{version}.tar
 ADD fedora-docker-base-25-beta-1.1.tar.xz /
+
 # ^^ becomes the equivalent of fedora base image as if
 # FROM fedora:{release}
 
