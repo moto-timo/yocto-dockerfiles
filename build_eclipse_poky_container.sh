@@ -20,7 +20,9 @@
 set -e
 
 # To build (for example):
-# 'REPO=crops/yocto DISTRO_TO_BUILD=fedora-24 ./build_eclipse_poky_container.sh'
+# 'BRANCH=neon-master GITREPO=git://git.yoctoproject.org/eclipse-poky.git REPO=crops/yocto DISTRO_TO_BUILD=fedora-24 ./build_eclipse_poky_container.sh'
+# BRANCH is the eclipse-poky branch to clone and checkout
+# GITREPO is the URI for the git repo from which to clone eclipse-poky
 # REPO should be crops/yocto
 # DISTRO_TO_BUILD is essentially the prefix to the "base" and "builder"
 # directories you plan to use. i.e. "fedora-23" or "ubuntu-14.04"
@@ -60,7 +62,7 @@ cd $workdir
 sed -i -e "s#crops/yocto#$REPO#" Dockerfile
 
 # Lastly build the image
-docker build -t $REPO:$TAG .
+docker build --build-arg BRANCH=$BRANCH --build-arg GITREPO=$GITREPO -t $REPO:$TAG .
 cd -
 
 # We don't have tests yet for eclipse-poky-builder containers
