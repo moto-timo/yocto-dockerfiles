@@ -34,6 +34,8 @@ elif grep -q Ubuntu /etc/*release || grep -q Debian /etc/*release; then
     true;
 elif grep -q openSUSE /etc/*release; then
     zypper --non-interactive install xdpyinfo
+elif grep -q Scientific /etc/*release; then
+    yum -y install xorg-x11-utils
 else
     exit 1
 fi

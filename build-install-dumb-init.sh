@@ -15,6 +15,9 @@ elif grep -q Ubuntu /etc/*release || grep -q Debian /etc/*release; then
 elif grep -q openSUSE /etc/*release; then
     INSTALL_CMD="zypper --non-interactive install python3-pip glibc-devel-static"
     REMOVE_CMD="zypper --non-interactive remove python3-pip glibc-devel-static"
+elif grep -q Scientific /etc/*release; then
+    INSTALL_CMD="yum -y install python34-pip glibc-static"
+    REMOVE_CMD="yum -y remove python34-pip glibc-static"
 else
     exit 1
 fi
