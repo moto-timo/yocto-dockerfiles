@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 #
 
-FROM ubuntu:24.04
+FROM ubuntu:24.10
 
 ARG TARGETPLATFORM
 
